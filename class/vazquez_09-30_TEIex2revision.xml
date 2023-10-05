@@ -13,9 +13,14 @@
             <p>copyright 1908</p>
          </publicationStmt>
          <sourceDesc>
-            <p>friendship calander co. new britan conn</p>
+            <msDesc>
+               <msIdentifier>
+                  
+               </msIdentifier>
+            </msDesc>
          </sourceDesc>
       </fileDesc>
+      <xenoData type="calander"/>
    </teiHeader>
    <text>
       <body>
@@ -24,10 +29,10 @@
                <p><date when="1909-01-30">January 30, 1909. saturday</date></p>
             </div>
             <div type="maintext">
-               <p rendition="mine"><unclear>that damned Da clrle gives me a slecde bacle laseeieq wheel its
+               <p rendition="mine"><unclear confidence="25">that damned Da clrle gives me a slecde bacle laseeieq wheel its
                   dark AT likes utea fan, ret l're lrquee Yo tire of the lake!</unclear></p>
-               <metamark>the illustration in monochrome is of a man waking up at night illuminated
-                  by the lamp on his nightstand, he has a mustache and looks bothered. the 1st letter of january is also a very ornate grey</metamark>
+               <desc>the illustration in monochrome is of a man waking up at night illuminated
+                  by the lamp on his nightstand, he has a mustache and looks bothered. the 1st letter of january is also a very ornate grey</desc>
             </div>
          </div>
 
@@ -36,14 +41,14 @@
                <p><date when="1909-02-16">Febuary 16, 1909. tuesday</date></p>
             </div>
             <div type="maintext">
-               <p rendition="mine"><unclear>Mr. Neleura finds a big bug ! I wonder if you had found many
-                  latley!</unclear></p>
-               <metamark>1st sentance is black text, 2nd is red. the picture is of a man in a robe
-                  holding a big circular spider outside next to a tree. the 1st letter of febuary is ornate red</metamark>
+               <p rendition="mine"><unclear confidence="87">Mr. Neleura finds a big bug ! I wonder if you had found many
+                  lately!</unclear></p>
+               <desc>1st sentance is black text, 2nd is red. the picture is of a man in a robe
+                  holding a big circular spider outside next to a tree. the 1st letter of febuary is ornate red</desc>
             </div>
          </div>
+         <note>a lot of these calanders have great art, but the legibilaty of the notes is horrendous</note>
+         <!--something I noticed here is just typing in a "<", you can see everything thats availble to next within the element in a list, or at least everything they included here--> 
       </body>
    </text>
-
-
 </TEI>

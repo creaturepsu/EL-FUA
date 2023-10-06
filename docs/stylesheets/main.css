@@ -1,0 +1,24 @@
+
+body {
+    background: MediumSeaGreen;
+}
+
+.faq {
+    background-color: #00DCAD;
+    box-sizing: border-box;
+    padding: 0.5em;
+}
+
+.faq > .q::before {
+    font-weight: bold;
+    content: 'Q: ';
+}
+
+.faq > .a::before {
+    font-weight: bold;
+    content: 'A: ';
+}
+
+img {
+    max-width: 95vw;
+}

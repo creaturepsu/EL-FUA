@@ -1,20 +1,22 @@
 
+h1 {
+    background-color: #DEFF91;
+}
+
 body {
     background: MediumSeaGreen;
 }
 
 .faq {
     background-color: #00DCAD;
-    box-sizing: border-box;
-    padding: 0.5em;
 }
 
-.faq > .q::before {
+.faq > p:nth-of-type(odd)::before {
     font-weight: bold;
     content: 'Q: ';
 }
 
-.faq > .a::before {
+.faq > p:nth-of-type(even)::before {
     font-weight: bold;
     content: 'A: ';
 }

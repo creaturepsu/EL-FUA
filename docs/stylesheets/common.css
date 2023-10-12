@@ -1,0 +1,22 @@
+
+nav {
+    background-color: #C1E0A2;
+    margin-top: 1em;
+}
+
+section, nav {
+    box-sizing: border-box;
+    padding: 0.5em;
+}
+
+section.contact {
+    background-color: #00DCAD;
+}
+
+section.contact > h2 {
+    font-family: Lucida Console, Courier New, monospace;
+}
+
+img {
+    max-width: 95vw;
+}

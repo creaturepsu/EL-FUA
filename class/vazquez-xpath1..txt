@@ -1,0 +1,55 @@
+1)First, let's explore the CBML document in the Outline view in oXygen. (If you can't see the Outline view, go to Window >> Show View >> Outline.) Notice how the document is organized. Can you find the elements that hold a whole page, or "panel group" of the comic? The elements share this structure: <div type="panelGrp">. Write an XPath expression that finds all the elements that hold panel groups in this file. "'//div since' the div elements only contain panel groups"
+
+
+2)Use the expression that you wrote to answer 1, and "step down the tree" to find all the panels. Record your XPath expression. Notice that you need to use the cbml: prefix here. That is because these elements for panels are inside the CBML namespace. "'//div/cbml:panel' finds every panel in the panelGrp"
+
+
+3)Let's try narrowing down the results with an XPath predicate, written with [ ] in your expression.
+
+Write an XPath that will return only the second panel group (literally the second whole page) in the document. You can use a position marker: [2] "'//div/cbml:panel[2]' is it really that easy? or is there a panelGrp 2 im not aware of?"
+
+Now, build on that expression to return only the <cbml:panel> elements inside that second panel group. "'//div/cbml:panel[2][cbml:caption][note][floatingText]' I assume its just everything inside the panel element right? even so, why is it that certain panels numbered 2 are not included? I check and the order of the brackets does not seem to matter so I dont really get why its happening"
+
+How many results do you return? "11 items"
+
+
+4)Let's explore finding attributes. As you explore the XML, notice how characters are marked in the panels.
+
+Write an XPath expression that returns all the values of the @characters attribute. "'//@characters' but the only character present is the narrator? unless I misunderstood the question"
+
+How many results do you see? "53 items"
+
+
+5)Okay, usually we work with attributes to help filter elements. Let's say we want to find all the panels in which only the narrator is represented? Use an XPath predicate with [ ] to help return the panels that are only representing the narrator. "'//div/cbml:panel[@characters="#narrator"]' I think this works? but it really just shows the same as my previous answer, except now there are 52 items which is strange"
+
+
+6)The <floatingText> element in CBML is a pretty exciting application of the TEI. It lets you nest a whole new "document" inside any level of the text you want. How are these useful in CBML? Let's take a look at them?
+
+How many <floatingText> elements do you see? "41 items"
+
+What kind of content do you think is being described here? (Take a guess if you're not sure--I know you can't see the whole comic.) "I think judging by it's children, its describing the location of the comic strip's title or maybe some sort of phrase of interest in a certain part of the strip"
+
+How many panel elements contain floatingText elements? Write an XPath expression that uses a predicate [ ] to return only the <cbml:panel> elements that have a <floatingText> element inside. "'//div/cbml:panel[floatingText]' returned 26/58 items of panels with floating text"
+
+You can see the number of results in the return window, but let's try adding a function to your expression. Try applying the count() function to return a count of the number of panels that include floatingText. "'//div/cbml:panel/count([floatingText])' I dont think this even worked. I tried lots of combinations of use count(x) and still couldnt find out how to write it in a way which calculated the number of panels including floatingtext"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

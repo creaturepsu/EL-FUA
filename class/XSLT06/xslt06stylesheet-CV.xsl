@@ -13,22 +13,26 @@
                 <link rel="stylesheet" type="text/css" href="style.css"/> 
             </head>
             <body>                
-                <h1><xsl:apply-templates select="descendant::titleStmt/title"/></h1>                 
-                <div id="{xml:id}">                                    
-                    <table>
-                        <tr>
-                            <th>Page</th>
-                            <th>Panels</th>
-                        </tr>
-                        <xsl:apply-templates select=".//div[@type='page']" mode="toc"/>
-                    </table>
+                <h1>alice underground</h1>                 
+                <div id="toc">                                    
+                    <ul>                                                                                     
+                        <xsl:apply-templates select=".//chapter" mode="toc"/>
+                    </ul>
                 </div>     
+                
                 <div id="reading-view">        
-                    <xsl:apply-templates select="descendant::body"/>                  
+                    <xsl:apply-templates select="descendant::chapter"/>                  
                 </div>              
             </body>
         </html>
     </xsl:template> 
+    
+    <xsl:template match="chapter" mode="toc">
+        <li>
+            <a href="#{@xml:id}"><xsl:apply-templates select="heading"/></a>
+        </li>
+        
+    </xsl:template>
     
     <xsl:template match="heading">      
         <h2 class="heading">
@@ -66,9 +70,6 @@
         </div>
     </xsl:template>
     
-    <xsl:template>
-        
-    </xsl:template>
     
     
     <!--ok im not really sure how this would even work and this is as far
@@ -77,19 +78,8 @@
     like this is somehow taking priority over the literal html? I really dont follow. AVTS
     just dont seem to work here-->
     
-    <xsl:template match="chapter">
-        <ul>
-            <a href="#n{count(preceding::chapter) + 1}">
-                <xsl:value-of select="count(preceding::chapter) + 1"/>
-            </a>
-        </ul>
-    </xsl:template>
-    
-    <xsl:template match="chapter">      
-        <div class="chapter">
-            <xsl:apply-templates/> 
-        </div>
-    </xsl:template>
+   
+ 
     
     
     

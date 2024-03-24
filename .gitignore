@@ -1,5 +1,3 @@
-.DS_Store
-*/**/.DS_Store
 # OS generated files #
 ######################
 .DS_Store
@@ -14,4 +12,9 @@ Thumbs.db
 .idea/
 venv/
 __pycache__/
-.govscrts
+Lib/
+Scripts/
+etc/
+pyvenv.cfg
+share/
+.ipynb_checkpoints/

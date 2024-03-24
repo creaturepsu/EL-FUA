@@ -1,3 +1,0 @@
-//p/char[contains(.,'Alice')] returns a list of every mention of Alice (HAS TO BE UPPERCASE)
-//chapter[//p[contains(., 'but')]] gives me a list of instances where but is used
-//p[contains(.,rabbit)] has a list of every mention of the word rabbit

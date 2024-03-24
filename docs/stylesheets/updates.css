@@ -1,0 +1,26 @@
+
+h1 {
+    background-color: #DEFF91;
+}
+
+body {
+    background: MediumSeaGreen;
+}
+
+.faq {
+    background-color: #00DCAD;
+}
+
+.faq > p:nth-of-type(odd)::before {
+    font-weight: bold;
+    content: 'Q: ';
+}
+
+.faq > p:nth-of-type(even)::before {
+    font-weight: bold;
+    content: 'A: ';
+}
+
+img {
+    max-width: 95vw;
+}

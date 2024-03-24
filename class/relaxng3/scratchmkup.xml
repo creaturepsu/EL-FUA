@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="scratchrelax.rnc" type="application/relax-ng-compact-syntax"?>
+<xml>
+    <excerpt from="mortal man">
+    <line n="1">I remember <lang meaning="monologue">you was conflicted</lang></line>
+    <line n="2">Misusing your influence</line>
+    <line n="3">Sometimes I did the same</line>
+    <line n="4">Abusing my power, full of resentment</line>
+    <line n="5">Resentment that turned into a deep depression</line>
+    <line n="6">Found myself screaming in the hotel room</line>
+    <line n="7">I didn’t wanna self destruct</line>
+    <line n="8">The evils of <lang meaning="lucifer">Lucy</lang> was all around me</line>
+    <line n="9">So I went running for answers</line>
+    <line n="10">Until I came home</line>
+    <line n="11">But that didn’t stop survivor’s guilt</line>
+    <line n="12">Going back and forth trying to convince myself the stripes I earned</line>
+    <line n="13">Or maybe how <lang meaning="excellent">A-1</lang> my foundation was</line>
+    <line n="14">But while my loved ones was fighting the continuous war back in the city, I was entering a new one</line>
+    <line n="15">A war that was based on apartheid and discrimination</line>
+    <line n="16">Made me wanna go back to the city and tell the homies what I learned</line>
+    <line n="17">The word was respect</line>
+    <line n="18">Just because you wore a different gang color than mine's</line>
+    <line n="19">Doesn’t mean I can’t respect you as a black man</line>
+    <line n="20">Forgetting all the pain and hurt we caused each other in these streets</line>
+    <line n="21">If I respect you, we unify and stop the enemy from killing us</line>
+    <line n="22">But I don’t know, I’m no mortal man, <lang meaning="another black activist like MLK or Booker t">maybe I’m just another nigga</lang></line>
+    </excerpt>
+    <citation>
+        <who by="Kendrick lamar"/>
+        <where album="to_pimp_a_butterfly"/>
+        <when date="2015-03-15"/>
+    </citation>
+</xml>

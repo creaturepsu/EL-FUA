@@ -1,0 +1,30 @@
+'''            ^\s*(\w+)\s*Episode\s(\d+)\s*"([^\"]+)"\s*(?:By)\s*([^\r\n]+)\s*Transcribed\sby\s([^\r\n]+)\s*(.*)$         '''
+***WITH DOTALL CHECKED***
+
+^\s*([^\r\n]+): Starts at the beggining of the file and skips all the starting whitespace characters (not A-Z). Then, read to the end of the line. The content of the capturing group is the title of the script (FUTURAMA). The [^ matches anything but whats written inside (changed by the caret) with the \n being a linefeed (whitespace) character and the + finds 1 or more of the set (looks for the title). 
+
+\s*Episode\s(\d+): Read more whitespace characters until "Episode" is found. Then read 1 space, and put all following digits (0-9) into a capturing group. 
+
+\s*"([^\"]+)": Read more whitespace characters until the character literal " is found. Then keep reading anything thats not " into a capturing group. The [^ turns it into a negated set which tries to find whats inside the quotations (that arent quotations).
+
+\s*(?:By)\s*([^\r\n]+) Read more whitespace characters until "By" is found, then read more whitespace characters and capture what remains between the last whitespace character and the next newline. The "?:By" is to verify that the by is where we are looking but also prevents it from becoming a capture group since we need those for things that matter. the following capture group is a negated set which tries to find anything but whitespace until the author is found.
+
+\s*Transcribed\sby\s([^\r\n]+) Read more whitespace characters until "Transcribed by" is found, then read what remains in the line into a capturing group (the capturing group here being for transcribers)
+
+\s*(.*)$ Read more whitespace characters until a non-whitespace character is found. The remaining characters until the end of the text $ goes into capturing group 6 which is the body. "Dotall" is required since this causes "." to match newlines, which is necessary for finding the rest of the script
+
+
+this was then replaced with:
+<xml>
+  <meta>
+    <title>$1</title>
+    <episode num="$2">$3</episode>
+    <author>$4</author>
+    <transcribers>$5</transcribers>
+  </meta>
+  <body>$6</body>
+</xml>
+
+
+with each of the numbers corresponding to the expressions inside the parenthesis
+
